@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="text_input_layout_style" parent="TextAppearance.AppCompat">
+        <item name="android:textColorHint">#700444BF</item>  <!-- 默認狀態提示顏色和字體-->
+        <item name="android:textSize">14sp</item>
+        <!-- 下面可以根據需要設置, 如果沒有將默認使用默認theme的顏色 -->
+        <item name="colorAccent">#0584F2</item> <!-- Label標籤的顏色 -->
+        <item name="colorControlNormal">#700444BF</item> <!-- 設置底線默認狀態顏色 -->
+        <item name="colorControlActivated">#0584F2</item>  <!-- 選擇的底線顏色 -->
+    </style>
+</resources>

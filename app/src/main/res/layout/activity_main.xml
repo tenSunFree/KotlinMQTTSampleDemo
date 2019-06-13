@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        android:background="#A79674"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <LinearLayout
+            android:background="#A79674"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <!-- 顯示目前連線的狀態 -->
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="32dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/statusLabelCardView"
+                    app:cardBackgroundColor="#0444BF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="4dp">
+
+                <TextView
+                        android:textStyle="bold"
+                        android:layout_margin="6dp"
+                        android:id="@+id/statusLabelTextView"
+                        android:textColor="#EDF259"
+                        android:text="TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </android.support.v7.widget.CardView>
+        </FrameLayout>
+
+        <!-- ip Address Field -->
+        <android.support.design.widget.TextInputLayout
+                android:theme="@style/text_input_layout_style"
+                android:id="@+id/ipAddressFieldTextInputLayout"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <EditText
+                    android:textColor="#0444BF"
+                    android:singleLine="true"
+                    android:text="broker.hivemq.com"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:id="@+id/ipAddressFieldEditText"
+                    android:hint="Enter broker address"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- topic Field -->
+        <android.support.design.widget.TextInputLayout
+                android:theme="@style/text_input_layout_style"
+                android:id="@+id/topicFieldTextInputLayout"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <EditText
+                    android:textColor="#0444BF"
+                    android:singleLine="true"
+                    android:text=""
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:id="@+id/topicFieldEditText"
+                    android:hint="Enter Topic to subscribe or listen"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- 連接按鈕 -->
+        <Button
+                android:background="#E0EDF259"
+                android:textColor="#0AAFF1"
+                android:text="Connect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/connectBtn"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:onClick="connect"/>
+
+        <!-- message Field -->
+        <android.support.design.widget.TextInputLayout
+                android:theme="@style/text_input_layout_style"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:id="@+id/messageFieldInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <EditText
+                    android:textColor="#0444BF"
+                    android:singleLine="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:id="@+id/messageFieldEditText"
+                    android:hint="Enter a message"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- 發送按鈕 -->
+        <Button
+                android:layout_marginTop="16dp"
+                android:text="Send"
+                android:background="#E0EDF259"
+                android:textColor="#0AAFF1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sendBtn"
+                android:onClick="sendMessage"/>
+
+        <!-- 顯示發送結果 -->
+        <TextView
+                android:textColor="#EDF259"
+                android:background="#A79674"
+                android:textSize="18dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/messageHistoryView"/>
+    </LinearLayout>
+</ScrollView>
